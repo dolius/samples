@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Repository Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li a {
+            text-decoration: none;
+            color: #0366d6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Repository Index</h1>
+    <ul>
+        <!-- Auto-generate the list of files and directories -->
+        <!-- The links will point to the respective files/directories in your repository -->
+        {% for file in site.static_files %}
+            {% if file.path != '/index.html' %}
+                <li><a href="{{ file.path }}">{{ file.path }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
