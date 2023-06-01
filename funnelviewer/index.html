@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Funnel Visualization - Concepts for insurance claim  analysis</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/greghub/funnel-graph-js@master/dist/css/main.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/greghub/funnel-graph-js@master/dist/css/theme.min.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/brands.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="controls">
+    <button @click="getNextSet()">Sort</button>
+    <button @click="toggleDirection()">Flip</button>
+
+  </div>
+  <div class="funnels">
+    <vue-funnel-graph :width="width" :height="height" :labels="labels" :values="values" :colors="colors" :sub-labels="subLabels" :direction="direction" :gradient-direction="gradientDirection" :animated="true" :display-percentage="true"></vue-funnel-graph>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/greghub/funnel-graph-js/dist/js/funnel-graph.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js'></script><script type="module" src="./script.js"></script>
+
+</body>
+</html>
